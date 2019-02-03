@@ -1,4 +1,6 @@
 import React from 'react';
+import FirebaseContext from './context';
+import Firebase from './firebase';
 
 const Firebase = () => (
   <div>
@@ -6,4 +8,5 @@ const Firebase = () => (
   </div>
 );
 
+export { FirebaseContext };
 export default Firebase;

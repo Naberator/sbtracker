@@ -1,3 +1,4 @@
+import app from 'firebase/app'
 import * as CREDS from '../../ds.Store1';
 const config = {
     apiKey: CREDS.API_KEY,
@@ -7,3 +8,12 @@ const config = {
     storageBucket: CREDS.STORAGE_BUCKET,
     messagingSenderId: CREDS.MESSAGING_SENDER_ID
   };
+
+class Firebase {
+    constructor() {
+        app.initializeApp(config);
+    }
+}
+
+export default Firebase;
+
