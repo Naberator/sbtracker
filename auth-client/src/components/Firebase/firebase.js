@@ -1,4 +1,5 @@
-import app from 'firebase/app'
+import app from 'firebase/app';
+import 'firebase/auth';
 import * as CREDS from '../../ds.Store1';
 const config = {
     apiKey: CREDS.API_KEY,
@@ -12,6 +13,7 @@ const config = {
 class Firebase {
     constructor() {
         app.initializeApp(config);
+        this.auth = app.auth();
     }
 }
 
